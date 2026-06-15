@@ -400,29 +400,15 @@
 
       .fcard.fcard-left * {
         width: fit-content;
-        max-width: 60%;
+        max-width: 75%;
         margin-right: auto;
       }
       .fcard.fcard-right * {
         width: fit-content;
-        max-width: 60%;
+        max-width: 75%;
         margin-left: auto;
       }
-      .fcard::after {
-        content: '';
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          135deg,
-          rgba(123, 97, 255, 0.04),
-          transparent
-        );
-        opacity: 0;
-        transition: opacity 0.3s;
-      }
-      .fcard:hover::after {
-        opacity: 1;
-      }
+
       .fcard h3 {
         font-family: 'Orbitron', sans-serif;
         font-size: 0.85rem;
@@ -812,6 +798,19 @@
           max-width: 100%;
           margin-left: 0px;
           text-align-last: right;
+        }
+
+        .fcard.fcard-left,
+        .fcard.fcard-right h3 {
+          width: fit-content;
+        }
+
+        .fcard.fcard-left h3 {
+          margin-right: auto;
+        }
+
+        .fcard.fcard-right h3 {
+          margin-left: auto;
         }
 
         .fcard p {
