@@ -107,8 +107,8 @@
         .ev-teaser a:hover{text-decoration:underline;}
 
         /* TEAM — File 1 */
-        #team{border-top:1px solid var(--border);padding:7rem 4rem;}
-        .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem 2rem;margin-bottom:3.5rem;width:100%;}
+        #team{border-top:1px solid var(--border);padding:7rem 4rem;} #team h2{white-space:nowrap;font-size:clamp(1.5rem,2vw,2.2rem);}
+        .team-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.5rem 2rem;margin-top:1.5rem;margin-bottom:3.5rem;width:100%;}
         .tcard{text-align:center;transition:transform 0.3s;}
         .tcard:hover{transform:translateY(-5px);}
         .tcard a{display:block;color:inherit;text-decoration:none;}
@@ -116,7 +116,7 @@
         .tavatar{width:100px;height:100px;border-radius:50%;background:var(--purple-dim);border:1.5px solid var(--border);margin:0 auto 0.85rem;overflow:hidden;transition:border-color 0.25s;display:flex;align-items:center;justify-content:center;}
         .tcard:hover .tavatar{border-color:var(--purple);}
         .tavatar img{width:100%;height:100%;object-fit:cover;object-position:center top;}
-        .initials{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;color:var(--purple);letter-spacing:0.03em;}
+        .initials{font-family:'Orbitron',sans-serif;font-size:1rem;font-weight:700;color:var(--purple);letter-spacing:0.03em;display:none;}
         .tname{font-size:0.85rem;font-weight:500;color:var(--black);margin-bottom:0.2rem;font-family:'Inter',sans-serif;}
         .trole{font-size:0.7rem;color:var(--gray-light);line-height:1.4;font-family:'Inter',sans-serif;}
         .active-band{border-top:1px solid var(--border);padding-top:2.5rem;}
@@ -312,7 +312,7 @@
 <!-- TEAM — File 1 -->
 <section id="team">
     <p class="s-label reveal">The team</p>
-    <h2 class="reveal">The people<br />behind MAIN.</h2>
+    <h2 class="reveal">The people behind MAIN.</h2>
     <p class="s-sub reveal">Made by students, for students.</p>
     <div class="team-grid reveal" id="team-grid-js"></div>
     <div class="active-band reveal">
