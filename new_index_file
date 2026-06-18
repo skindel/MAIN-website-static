@@ -1157,25 +1157,25 @@
       {
         name:     'Max Hesse',
         role:     'President',
-        photo:    'src/assets/team/Max.hesse.jpeg',
+        photo:    'Max.hesse.jpeg',
         linkedin: 'https://www.linkedin.com/in/maxlhesse'
       },
       {
         name:     'Finley Sieben',
         role:     'Vice President',
-        photo:    'src/assets/team/Finley.sieben.jpeg',
+        photo:    'Finley.sieben.jpeg',
         linkedin: 'https://www.linkedin.com/in/finley-sieben-1a1026225/'
       },
       {
         name:     'Merle Kleuters',
         role:     'Head of Brand & Strategy',
-        photo:    'src/assets/team/Merle.kleuters.jpeg',
+        photo:    'Merle.kleuters.jpeg',
         linkedin: 'https://www.linkedin.com/in/merle-kleuters-a574573a4/'
       },
       {
         name:     'Jonathan Schindera',
         role:     'Head of Operations',
-        photo:    'src/assets/team/Jonathan.schindera.png',
+        photo:    'Jonathan.schindera.png',
         linkedin: 'https://www.linkedin.com/in/jonathan-schindera/'
       }
     ];
