@@ -24,6 +24,16 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 reveals.forEach(el => obs.observe(el));
 
+/* Gallery buttons — File 3 */
+(function() {
+    const gallery = document.querySelector('#event-gallery .gallery-row');
+    const btnLeft = document.querySelector('.gallery-btn-left');
+    const btnRight = document.querySelector('.gallery-btn-right');
+    if (!gallery || !btnLeft || !btnRight) return;
+    btnLeft.addEventListener('click', () => gallery.scrollBy({ left: -436, behavior: 'smooth' }));
+    btnRight.addEventListener('click', () => gallery.scrollBy({ left: 436, behavior: 'smooth' }));
+})();
+
 /* Team render — File 1 (only edit TEAM_DATA) */
 const TEAM_DATA = [
     { name: 'Max Hesse',          role: 'President',                photo: 'img/team/Max.hesse.jpeg',          linkedin: 'https://www.linkedin.com/in/maxlhesse' },
