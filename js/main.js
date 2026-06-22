@@ -76,3 +76,95 @@ const TEAM_DATA = [
         }, 300);
     }, 2200);
 })();
+
+
+// ─── JOIN & CONTACT CARDS ───────────────────────────────────────────────────
+    // To show/hide a card, set its 'visible' value to true or false.
+    // The layout adjusts automatically based on how many cards are visible.
+    const JOIN_CARDS = [
+      {
+        id: 'community',
+        visible: true,
+        tag: 'Free',
+        heading: 'Community Member',
+        body: 'Join our WhatsApp community and stay in the loop — events, opportunities, and updates from MAIN.',
+        perks: ['Access to WhatsApp group', 'Event announcements', 'No commitment required'],
+        buttons: [
+          { label: 'Join WhatsApp', href: 'https://chat.whatsapp.com/K6Es4IONAYrEkVpQLfkUw3', style: 'primary', target: '_blank' }
+        ]
+      },
+      {
+        id: 'passive',
+        visible: true,
+        tag: 'Member',
+        heading: 'Passive Member',
+        body: 'Officially part of MAIN. Get access to exclusive events and be listed as a registered member.',
+        perks: ['Official membership', 'Exclusive event access', 'MAIN member certificate'],
+        buttons: [
+          { label: 'Become Passive Member', href: 'https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAXBOZiRUNDA3REZaRTJNM0RRTVBUWUMwN1hBTjlNMS4u&route=shorturl', style: 'primary', target: '_blank' }
+        ]
+      },
+      {
+        id: 'company',
+        visible: true,
+        tag: 'Partner',
+        heading: 'Company Projects',
+        body: 'Bring a real challenge to our community. Students build creative solutions — sometimes products that actually ship.',
+        perks: ['Present a challenge', 'Access to student talent', 'Networking with UM students'],
+        buttons: [
+          { label: 'Get in Touch', href: 'mailto:info@mainmaastricht.com', style: 'primary', target: '_self' }
+        ]
+      },
+      {
+        id: 'active',
+        visible: true,
+        tag: 'Core Team',
+        heading: 'Active Member',
+        body: 'Shape the direction of MAIN. Help organise events, build partnerships, and grow the community.',
+        perks: ['Core team access', 'Co-organise events', 'Lead initiatives'],
+        buttons: [
+          { label: 'Apply Now', href: 'https://tally.so/r/68rNAe', style: 'primary', target: '_blank' },
+          { label: 'Follow for Updates', href: 'https://www.instagram.com/main.maastricht/', style: 'ghost', target: '_blank' }
+        ]
+      }
+    ];
+
+    function renderJoinCards() {
+      const grid = document.getElementById('jcGrid');
+      if (!grid) return;
+      grid.innerHTML = '';
+      JOIN_CARDS.filter(c => c.visible).forEach(card => {
+        const perksHtml = card.perks.map(p => `<li>${p}</li>`).join('');
+        const btnsHtml = card.buttons.map(b =>
+          `<a href="${b.href}" class="jc-btn jc-btn-${b.style}" target="${b.target}" rel="noopener">${b.label}</a>`
+        ).join('');
+        const el = document.createElement('div');
+        el.className = 'jc-card';
+        el.innerHTML = `
+          <div class="jc-card-head">
+            <p class="jc-card-tag">${card.tag}</p>
+            <h3 class="jc-card-title">${card.heading}</h3>
+          </div>
+          <div class="jc-card-body">
+            <p>${card.body}</p>
+            <ul>${perksHtml}</ul>
+          </div>
+          <div class="jc-card-footer">${btnsHtml}</div>`;
+        grid.appendChild(el);
+      });
+    }
+
+    renderJoinCards();
+
+    // CONTACT FORM — submit handler
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const name    = document.getElementById('cf-name').value.trim();
+      const email   = document.getElementById('cf-email').value.trim();
+      const message = document.getElementById('cf-message').value.trim();
+      if (!name || !email || !message) return;
+      // Replace the mailto href below with your backend endpoint or form service (e.g. Formspree)
+      window.location.href = `mailto:info@mainmaastricht.com?subject=Website contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
+      document.getElementById('cfSuccess').style.display = 'block';
+      this.reset();
+    });

@@ -244,6 +244,65 @@
     </div>
 </section>
 
+<!-- JOIN & CONTACT -->
+<section id="joinAndContact">
+  <p class="s-label reveal">Join &amp; Contact</p>
+  <h2 class="reveal">Find your place<br>in MAIN.</h2>
+  <p class="s-sub reveal">Choose how you want to be part of the community.</p>
+  <div class="jc-grid reveal" id="jcGrid"></div>
+
+  <div class="socials-wrap reveal">
+    <h3>Follow Us</h3>
+    <p class="socials-sub">Stay connected — get the latest from MAIN</p>
+    <div class="socials-list">
+      <a href="https://www.instagram.com/main.maastricht/" class="social-link" target="_blank" rel="noopener" aria-label="Follow MAIN on Instagram">
+        <svg fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.linkedin.com/company/maastricht-ai/" class="social-link" target="_blank" rel="noopener" aria-label="Follow MAIN on LinkedIn">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        LinkedIn
+      </a>
+    </div>
+  </div>
+
+  <div class="contact-wrap reveal">
+    <h3>Get in touch</h3>
+    <p class="contact-sub">Have a question, partnership idea, or just want to say hi? Send us a message and we'll get back to you.</p>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="cf-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+        </div>
+      </div>
+      <div class="cf-field">
+        <label for="cf-topic">Topic</label>
+        <select id="cf-topic" name="topic">
+          <option value="">Select a topic…</option>
+          <option value="general">General question</option>
+          <option value="partnership">Partnership / Company</option>
+          <option value="membership">Membership</option>
+          <option value="press">Press / Media</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="cf-field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
+      </div>
+      <button type="submit" class="cf-submit">Send message</button>
+      <p class="cf-success" id="cfSuccess">Thanks! We'll get back to you soon.</p>
+    </form>
+  </div>
+
+</section>
+
+
 <!-- FOOTER — File 2 unchanged -->
 <footer>
     <div class="footer-logo">
