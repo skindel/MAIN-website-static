@@ -138,17 +138,51 @@
     .tname { font-size: 0.87rem; font-weight: 500; margin-bottom: 0.25rem; color: var(--black); font-family: 'Inter', sans-serif; }
     .trole { font-size: 0.72rem; color: var(--gray); line-height: 1.4; font-family: 'Inter', sans-serif; }
 
-    /* JOIN */
-    #join { border-top: 1px solid var(--border); text-align: center; background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(123,97,255,0.05), transparent); }
-    #join h2, #join .s-sub { margin-left: auto; margin-right: auto; }
-    #join .s-sub { text-align: center; margin-bottom: 3rem; }
-    .join-btns { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
-    .btn-wa { background: #25d366; color: #000; padding: 0.85rem 2rem; border-radius: 100px; font-size: 0.88rem; text-decoration: none; font-weight: 500; display: flex; align-items: center; gap: 0.5rem; transition: opacity 0.2s, transform 0.2s; font-family: 'Inter', sans-serif; }
-    .btn-wa:hover { opacity: 0.88; transform: translateY(-2px); }
-    .btn-ig { background: transparent; color: var(--black); padding: 0.85rem 2rem; border-radius: 100px; font-size: 0.88rem; text-decoration: none; font-weight: 400; display: flex; align-items: center; gap: 0.5rem; border: 1px solid var(--border); transition: border-color 0.2s, transform 0.2s, background 0.2s; font-family: 'Inter', sans-serif; }
-    .btn-ig:hover { border-color: var(--purple); background: rgba(123,97,255,0.04); transform: translateY(-2px); }
-    .btn-apply { background: var(--purple); color: #fff; padding: 0.85rem 2rem; border-radius: 100px; font-size: 0.88rem; text-decoration: none; font-weight: 400; display: flex; align-items: center; gap: 0.5rem; box-shadow: 0 0 24px rgba(123,97,255,0.2); transition: background 0.2s, transform 0.2s; font-family: 'Inter', sans-serif; }
-    .btn-apply:hover { background: var(--purple-light); transform: translateY(-2px); }
+    /* JOIN & CONTACT */
+    #joinAndContact { border-top: 1px solid var(--border); background: radial-gradient(ellipse 70% 60% at 50% 50%, rgba(123,97,255,0.05), transparent); }
+    #joinAndContact h2 { text-align: center; margin-left: auto; margin-right: auto; }
+    #joinAndContact .s-sub { text-align: center; margin-bottom: 0; margin-left: auto; margin-right: auto; }
+    .jc-grid { display: flex; gap: 1.5rem; justify-content: center; flex-wrap: wrap; margin-top: 3rem; align-items: stretch; }
+    .jc-card { flex: 1 1 220px; max-width: 270px; min-width: 200px; display: flex; flex-direction: column; border: 1px solid var(--border); border-radius: 12px; background: #fff; overflow: hidden; transition: transform 0.3s, box-shadow 0.3s; }
+    .jc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 32px rgba(123,97,255,0.1); }
+    .jc-card-head { padding: 1.75rem 1.75rem 1.1rem; border-bottom: 1px solid var(--border); }
+    .jc-card-tag { font-size: 0.62rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--purple); margin-bottom: 0.45rem; font-family: 'Inter', sans-serif; }
+    .jc-card-title { font-family: 'Orbitron', sans-serif; font-size: 0.82rem; font-weight: 700; color: var(--black); line-height: 1.25; }
+    .jc-card-body { padding: 1.4rem 1.75rem; flex: 1; }
+    .jc-card-body p { font-size: 0.83rem; color: var(--gray); line-height: 1.75; font-family: 'Inter', sans-serif; }
+    .jc-card-body ul { margin: 0.85rem 0 0 1.1rem; padding: 0; font-size: 0.8rem; color: var(--gray); line-height: 1.9; font-family: 'Inter', sans-serif; }
+    .jc-card-footer { padding: 1.1rem 1.75rem 1.75rem; display: flex; flex-direction: column; gap: 0.55rem; }
+    .jc-btn { display: flex; align-items: center; justify-content: center; padding: 0.6rem 1.1rem; border-radius: 100px; font-size: 0.8rem; text-decoration: none; font-family: 'Inter', sans-serif; transition: all 0.2s; text-align: center; }
+    .jc-btn-primary { background: var(--purple); color: #fff; box-shadow: 0 0 16px rgba(123,97,255,0.18); }
+    .jc-btn-primary:hover { background: var(--purple-light); transform: translateY(-1px); }
+    .jc-btn-ghost { background: transparent; color: var(--black); border: 1px solid var(--border); }
+    .jc-btn-ghost:hover { border-color: var(--purple); background: rgba(123,97,255,0.04); transform: translateY(-1px); }
+
+    /* CONTACT FORM */
+    .contact-wrap { margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--border); max-width: 560px; margin-left: auto; margin-right: auto; text-align: left; }
+    .contact-wrap h3 { font-family: 'Orbitron', sans-serif; font-size: 1rem; font-weight: 700; color: var(--black); margin-bottom: 0.4rem; }
+    .contact-wrap .contact-sub { font-size: 0.85rem; color: var(--gray); line-height: 1.7; margin-bottom: 2rem; font-family: 'Inter', sans-serif; }
+    .contact-form { display: flex; flex-direction: column; gap: 1rem; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+    .cf-field { display: flex; flex-direction: column; gap: 0.35rem; }
+    .cf-field label { font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--gray); font-family: 'Inter', sans-serif; }
+    .cf-field input, .cf-field textarea, .cf-field select { width: 100%; padding: 0.7rem 1rem; border: 1px solid var(--border); border-radius: 8px; font-size: 0.85rem; font-family: 'Inter', sans-serif; color: var(--black); background: #fff; outline: none; transition: border-color 0.2s, box-shadow 0.2s; resize: none; appearance: none; }
+    .cf-field input:focus, .cf-field textarea:focus, .cf-field select:focus { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(123,97,255,0.1); }
+    .cf-field textarea { min-height: 110px; }
+    .cf-submit { background: var(--purple); color: #fff; border: none; padding: 0.75rem 2rem; border-radius: 100px; font-size: 0.88rem; font-family: 'Inter', sans-serif; cursor: pointer; transition: background 0.2s, transform 0.2s; align-self: flex-start; box-shadow: 0 0 20px rgba(123,97,255,0.18); }
+    .cf-submit:hover { background: var(--purple-light); transform: translateY(-1px); }
+    .cf-success { display: none; font-size: 0.85rem; color: var(--purple); font-family: 'Inter', sans-serif; margin-top: 0.5rem; }
+    @media (max-width: 700px) { .cf-row { grid-template-columns: 1fr; } .cf-submit { align-self: stretch; text-align: center; } }
+
+    /* SOCIAL SECTION */
+    .socials-wrap { margin-top: 4rem; padding-top: 4rem; border-top: 1px solid var(--border); max-width: 560px; margin-left: auto; margin-right: auto; text-align: left; }
+    .socials-wrap::before { content: ''; position: absolute; top: 0; left: 50%; transform: translateX(-50%); width: 60px; height: 1px; background: var(--border); }
+    .socials-wrap h3 { font-family: 'Orbitron', sans-serif; font-size: 0.95rem; font-weight: 700; color: var(--black); margin-bottom: 0.3rem; }
+    .socials-wrap .socials-sub { font-size: 0.8rem; color: var(--gray); margin-bottom: 1.5rem; font-family: 'Inter', sans-serif; }
+    .socials-list { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+    .social-link { display: flex; align-items: center; justify-content: center; gap: 0.4rem; padding: 0.65rem 1.6rem; border: 1px solid var(--border); border-radius: 100px; text-decoration: none; font-size: 0.82rem; color: var(--black); font-family: 'Inter', sans-serif; transition: all 0.2s; }
+    .social-link:hover { border-color: var(--purple); background: rgba(123,97,255,0.04); transform: translateY(-2px); }
+    .social-link svg { width: 18px; height: 18px; }
 
     /* FOOTER */
     footer { border-top: 1px solid var(--border); padding: 2rem 4rem; display: flex; justify-content: space-between; align-items: center; color: var(--gray-light); font-size: 0.76rem; background: #fafafa; font-family: 'Inter', sans-serif; }
@@ -179,7 +213,7 @@
       .ev-layout { grid-template-columns: 1fr; gap: 3rem; }
       .ev-photo { aspect-ratio: 4 / 3; }
       footer { flex-direction: column; gap: 1rem; text-align: center; }
-      .join-btns { flex-direction: column; align-items: center; }
+      .jc-card { max-width: 100%; min-width: 0; flex: 1 1 100%; }
     }
   </style>
 </head>
@@ -191,9 +225,10 @@
     <a href="#what">What we do</a>
     <a href="#events">Events</a>
     <a href="#team">Team</a>
+    <a href="#joinAndContact">Join & Contact</a>
   </div>
   <div class="nav-right">
-    <a href="#join" class="nav-cta">Connect</a>
+    <a href="#joinAndContact" class="nav-cta">Connect</a>
     <a href="https://tally.so/r/68rNAe?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnw_uHqAKVMPxE0WVYSXbmAWzOkmwdYm6o9sFSivX8DV3H677qOb2EKbenT-4_aem_z7sTtI1TGosHFUo3yZt-IA" class="nav-apply" target="_blank" rel="noopener">Apply</a>
     <button class="hamburger" id="hamburger" aria-label="Menu">
       <span></span><span></span><span></span>
@@ -205,7 +240,7 @@
   <a href="#what" onclick="closeMenu()">What we do</a>
   <a href="#events" onclick="closeMenu()">Events</a>
   <a href="#team" onclick="closeMenu()">Team</a>
-  <a href="#join" class="nav-cta" onclick="closeMenu()">Connect</a>
+  <a href="#joinAndContact" onclick="closeMenu()">Join</a>
   <a href="https://tally.so/r/68rNAe?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnw_uHqAKVMPxE0WVYSXbmAWzOkmwdYm6o9sFSivX8DV3H677qOb2EKbenT-4_aem_z7sTtI1TGosHFUo3yZt-IA" class="nav-cta" target="_blank" rel="noopener" onclick="closeMenu()">Apply</a>
 </div>
 
@@ -215,7 +250,7 @@
   <h1>Maastricht's community for <em>AI</em> and tech.</h1>
   <p class="hero-sub">MAIN brings together students shaping the future with artificial intelligence and technology — through events, workshops, and hackathons.</p>
   <div class="hero-actions">
-    <a href="#join" class="btn-primary">Connect</a>
+    <a href="#joinAndContact" class="btn-primary">Connect</a>
     <a href="https://tally.so/r/68rNAe?utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnw_uHqAKVMPxE0WVYSXbmAWzOkmwdYm6o9sFSivX8DV3H677qOb2EKbenT-4_aem_z7sTtI1TGosHFUo3yZt-IA" class="nav-apply" target="_blank" rel="noopener">Apply</a>
   </div>
 </section>
@@ -231,7 +266,7 @@
     <span class="stat-label">WhatsApp<br>community members</span>
   </div>
   <div class="stat-item">
-    <span class="stat-num">400+</span>
+    <span class="stat-num">500+</span>
     <span class="stat-label">Followers<br>on Instagram</span>
   </div>
   <div class="stat-item">
@@ -335,24 +370,61 @@
   </div>
 </section>
 
-<section id="join">
-  <p class="s-label reveal">Join</p>
-  <h2 class="reveal">Ready to get<br>involved?</h2>
-  <p class="s-sub reveal">Join the community, come to events, and connect with people who care about the same things you do.</p>
-  <div class="join-btns reveal">
-    <a href="https://chat.whatsapp.com/K6Es4IONAYrEkVpQLfkUw3" class="btn-wa" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
-      WhatsApp Community
-    </a>
-    <a href="https://www.instagram.com/main.maastricht/?hl=en" class="btn-ig" target="_blank">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-      Instagram
-    </a>
-    <a href="https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAXBOZiRUNDA3REZaRTJNM0RRTVBUWUMwN1hBTjlNMS4u&utm_source=ig&utm_medium=social&utm_content=link_in_bio&fbclid=PAZXh0bgNhZW0CMTEAc3J0YwZhcHBfaWQMMjU2MjgxMDQwNTU4AAGnErYpOanM1RWUnKwk-SunzYqMNqrr2kEL7DU62p9qg1LWQjmzVRQKdb_EXNo_aem_FZL7GngWaL0TPlByzgQQZA&route=shorturl" class="btn-apply" target="_blank" rel="noopener">
-      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
-      Become Passive Member
-    </a>
+<section id="joinAndContact">
+  <p class="s-label reveal">Join &amp; Contact</p>
+  <h2 class="reveal">Find your place<br>in MAIN.</h2>
+  <p class="s-sub reveal">Choose how you want to be part of the community.</p>
+  <div class="jc-grid reveal" id="jcGrid"></div>
+
+  <div class="socials-wrap reveal">
+    <h3>Follow Us</h3>
+    <p class="socials-sub">Stay connected — get the latest from MAIN</p>
+    <div class="socials-list">
+      <a href="https://www.instagram.com/main.maastricht/" class="social-link" target="_blank" rel="noopener" aria-label="Follow MAIN on Instagram">
+        <svg fill="currentColor" viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5" ry="5" fill="none" stroke="currentColor" stroke-width="2"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" fill="none" stroke="currentColor" stroke-width="2"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5" stroke="currentColor" stroke-width="2"/></svg>
+        Instagram
+      </a>
+      <a href="https://www.linkedin.com/company/maastricht-ai/" class="social-link" target="_blank" rel="noopener" aria-label="Follow MAIN on LinkedIn">
+        <svg fill="currentColor" viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.225 0z"/></svg>
+        LinkedIn
+      </a>
+    </div>
   </div>
+
+  <div class="contact-wrap reveal">
+    <h3>Get in touch</h3>
+    <p class="contact-sub">Have a question, partnership idea, or just want to say hi? Send us a message and we'll get back to you.</p>
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="cf-row">
+        <div class="cf-field">
+          <label for="cf-name">Name</label>
+          <input type="text" id="cf-name" name="name" placeholder="Your name" required />
+        </div>
+        <div class="cf-field">
+          <label for="cf-email">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="your@email.com" required />
+        </div>
+      </div>
+      <div class="cf-field">
+        <label for="cf-topic">Topic</label>
+        <select id="cf-topic" name="topic">
+          <option value="">Select a topic…</option>
+          <option value="general">General question</option>
+          <option value="partnership">Partnership / Company</option>
+          <option value="membership">Membership</option>
+          <option value="press">Press / Media</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+      <div class="cf-field">
+        <label for="cf-message">Message</label>
+        <textarea id="cf-message" name="message" placeholder="What's on your mind?" required></textarea>
+      </div>
+      <button type="submit" class="cf-submit">Send message</button>
+      <p class="cf-success" id="cfSuccess">Thanks! We'll get back to you soon.</p>
+    </form>
+  </div>
+
 </section>
 
 <footer>
@@ -386,6 +458,97 @@
     });
   }, { threshold: 0.1 });
   reveals.forEach(el => obs.observe(el));
+
+  // ─── JOIN & CONTACT CARDS ───────────────────────────────────────────────────
+  // To show/hide a card, set its 'visible' value to true or false.
+  // The layout adjusts automatically based on how many cards are visible.
+  const JOIN_CARDS = [
+    {
+      id: 'community',
+      visible: true,
+      tag: 'Free',
+      heading: 'Community Member',
+      body: 'Join our WhatsApp community and stay in the loop — events, opportunities, and updates from MAIN.',
+      perks: ['Access to WhatsApp group', 'Event announcements', 'No commitment required'],
+      buttons: [
+        { label: 'Join WhatsApp', href: 'https://chat.whatsapp.com/K6Es4IONAYrEkVpQLfkUw3', style: 'primary', target: '_blank' }
+      ]
+    },
+    {
+      id: 'passive',
+      visible: true,
+      tag: 'Member',
+      heading: 'Passive Member',
+      body: 'Officially part of MAIN. Get access to exclusive events and be listed as a registered member.',
+      perks: ['Official membership', 'Exclusive event access', 'MAIN member certificate'],
+      buttons: [
+        { label: 'Become Passive Member', href: 'https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAXBOZiRUNDA3REZaRTJNM0RRTVBUWUMwN1hBTjlNMS4u&route=shorturl', style: 'primary', target: '_blank' }
+      ]
+    },
+    {
+      id: 'company',
+      visible: true,
+      tag: 'Partner',
+      heading: 'Company Projects',
+      body: 'Bring a real challenge to our community. Students build creative solutions — sometimes products that actually ship.',
+      perks: ['Present a challenge', 'Access to student talent', 'Networking with UM students'],
+      buttons: [
+        { label: 'Get in Touch', href: 'mailto:info@mainmaastricht.com', style: 'primary', target: '_self' } // just for now...
+      ]
+    },
+    {
+      id: 'active',
+      visible: true,
+      tag: 'Core Team',
+      heading: 'Active Member',
+      body: 'Shape the direction of MAIN. Help organise events, build partnerships, and grow the community.',
+      perks: ['Core team access', 'Co-organise events', 'Lead initiatives'],
+      buttons: [
+        { label: 'Apply Now', href: 'https://tally.so/r/68rNAe', style: 'primary', target: '_blank' },
+        { label: 'Follow for Updates', href: 'https://www.instagram.com/main.maastricht/', style: 'ghost', target: '_blank' }
+      ]
+    }
+  ];
+
+  function renderJoinCards() {
+    const grid = document.getElementById('jcGrid');
+    if (!grid) return;
+    grid.innerHTML = '';
+    JOIN_CARDS.filter(c => c.visible).forEach(card => {
+      const perksHtml = card.perks.map(p => `<li>${p}</li>`).join('');
+      const btnsHtml = card.buttons.map(b =>
+        `<a href="${b.href}" class="jc-btn jc-btn-${b.style}" target="${b.target}" rel="noopener">${b.label}</a>`
+      ).join('');
+      const el = document.createElement('div');
+      el.className = 'jc-card';
+      el.innerHTML = `
+        <div class="jc-card-head">
+          <p class="jc-card-tag">${card.tag}</p>
+          <h3 class="jc-card-title">${card.heading}</h3>
+        </div>
+        <div class="jc-card-body">
+          <p>${card.body}</p>
+          <ul>${perksHtml}</ul>
+        </div>
+        <div class="jc-card-footer">${btnsHtml}</div>`;
+      grid.appendChild(el);
+    });
+  }
+
+  renderJoinCards();
+
+  // CONTACT FORM — submit handler
+  document.getElementById('contactForm').addEventListener('submit', function(e) {
+    e.preventDefault();
+    const name    = document.getElementById('cf-name').value.trim();
+    const email   = document.getElementById('cf-email').value.trim();
+    const message = document.getElementById('cf-message').value.trim();
+    if (!name || !email || !message) return;
+    // Replace the mailto href below with your backend endpoint or form service (e.g. Formspree)
+    window.location.href = `mailto:info@mainmaastricht.com?subject=Website contact from ${encodeURIComponent(name)}&body=${encodeURIComponent(message)}%0A%0AFrom: ${encodeURIComponent(email)}`;
+    document.getElementById('cfSuccess').style.display = 'block';
+    this.reset();
+  });
 </script>
 </body>
 </html>
