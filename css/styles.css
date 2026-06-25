@@ -757,11 +757,12 @@ h2 {
 }
 
 .ev-item {
-    padding: 1.4rem 0;
+    padding: 1.4rem 1rem 1.4rem;
     border-bottom: 1px solid var(--border);
     transition: border-color 0.2s;
     scroll-margin-top: 6rem;
 }
+
 
 .ev-item:last-child {
     border-bottom: none;
@@ -774,10 +775,12 @@ h2 {
     margin-bottom: 0.5rem;
 }
 
+
 .ev-name {
     font-size: 0.92rem;
     margin-bottom: 0.2rem;
-    color: var(--black);
+    color: var(--ev-target-color, var(--black)); 
+    transition: color 0.6s ease;
     font-family: 'Inter', sans-serif;
     font-weight: 500;
 }
@@ -817,6 +820,42 @@ h2 {
     box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
     margin-bottom: 1.25rem;
     display: block;
+}
+
+/* 1. Define your original styles using dynamic context fallbacks */
+.ev-name {
+    /* Uses the temporary target color if active, otherwise falls back to black */
+    color: var(--ev-target-color, var(--black)); 
+    transition: color 0.6s ease;
+}
+
+.ev-sub {
+    /* If active, turns purple, otherwise falls back to your original purple/gray */
+    color: var(--ev-target-color, var(--purple)); 
+    transition: color 0.6s ease;
+}
+
+.ev-desc {
+    /* If active, turns purple, otherwise falls back to your gray text */
+    color: var(--ev-target-color, var(--gray));
+    transition: color 0.6s ease;
+}
+
+/* 2. The Golden Rule: When targeted, flash everything to purple and fade back! */
+@keyframes variable-fade {
+    0%, 50% {
+        --ev-target-color: var(--purple);
+    }
+    100% {
+        /* Deleting the variable values safely causes the elements */
+        /* to immediately snap back to their standard fallbacks!   */
+        --ev-target-color: initial; 
+    }
+}
+
+.ev-item:target {
+    animation: variable-fade 1.5s forwards;
+    animation-delay: 0.1s;
 }
 
 .badge {
