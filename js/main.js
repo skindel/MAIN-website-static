@@ -1,4 +1,4 @@
-/* Nav — File 2 */
+/* Nav - File 2 */
 const hamburger = document.getElementById('hamburger');
 const mobileMenu = document.getElementById('mobileMenu');
 hamburger.addEventListener('click', () => {
@@ -12,7 +12,7 @@ function closeMenu() {
     document.body.style.overflow = '';
 }
 
-/* Reveal on scroll — File 2 */
+/* Reveal on scroll - File 2 */
 const reveals = document.querySelectorAll('.reveal');
 const obs = new IntersectionObserver((entries) => {
     entries.forEach((e, i) => {
@@ -24,7 +24,7 @@ const obs = new IntersectionObserver((entries) => {
 }, { threshold: 0.1 });
 reveals.forEach(el => obs.observe(el));
 
-/* Gallery buttons — File 3 */
+/* Gallery buttons - File 3 */
 (function() {
     const gallery = document.querySelector('#event-gallery .gallery-row');
     const btnLeft = document.querySelector('.gallery-btn-left');
@@ -34,12 +34,12 @@ reveals.forEach(el => obs.observe(el));
     btnRight.addEventListener('click', () => gallery.scrollBy({ left: 436, behavior: 'smooth' }));
 })();
 
-/* Team render — File 1 (only edit TEAM_DATA) */
+/* Team render - File 1 (only edit TEAM_DATA) */
 const TEAM_DATA = [
     { name: 'Max Hesse',          role: 'President',                photo: 'img/team/Max.hesse.jpeg',          linkedin: 'https://www.linkedin.com/in/maxlhesse' },
     { name: 'Finley Sieben',      role: 'Vice President',           photo: 'img/team/Finley.sieben.jpeg',      linkedin: 'https://www.linkedin.com/in/finley-sieben-1a1026225/' },
     { name: 'Merle Kleuters',     role: 'Head of Brand & Strategy', photo: 'img/team/Merle.kleuters.jpeg',     linkedin: 'https://www.linkedin.com/in/merle-kleuters-a574573a4/' },
-    { name: 'Jonathan Schindera', role: 'Head of Operations',       photo: 'img/team/Jonathan.schindera.png',  linkedin: 'https://www.linkedin.com/in/jonathan-schindera/' }
+    { name: 'Jonathan Schindera', role: 'Head of External Relations',       photo: 'img/team/Jonathan.schindera.png',  linkedin: 'https://www.linkedin.com/in/jonathan-schindera/' }
 ];
 (function() {
     const grid = document.getElementById('team-grid-js');
@@ -61,7 +61,7 @@ const TEAM_DATA = [
     });
 })();
 
-/* Cycling word — File 1 */
+/* Cycling word - File 1 */
 (function() {
     const el = document.getElementById('cycleWord');
     if (!el) return;
@@ -87,7 +87,7 @@ const TEAM_DATA = [
         visible: true,
         tag: 'Free',
         heading: 'Community Member',
-        body: 'Join our WhatsApp community and stay in the loop — events, opportunities, and updates from MAIN.',
+        body: 'Join our WhatsApp community and stay in the loop - events, opportunities, and updates from MAIN.',
         perks: ['Access to WhatsApp group', 'Event announcements', 'No commitment required'],
         buttons: [
           { label: 'Join WhatsApp', href: 'https://chat.whatsapp.com/K6Es4IONAYrEkVpQLfkUw3', style: 'primary', target: '_blank' }
@@ -99,7 +99,7 @@ const TEAM_DATA = [
         tag: 'Member',
         heading: 'Passive Member',
         body: 'Officially part of MAIN. Get access to exclusive events and be listed as a registered member.',
-        perks: ['Official membership', 'Exclusive event access', 'MAIN member certificate'],
+        perks: ['Official membership', 'Exclusive event access', 'Direct engagement'],
         buttons: [
           { label: 'Become Passive Member', href: 'https://forms.office.com/pages/responsepage.aspx?id=DQSIkWdsW0yxEjajBLZtrQAAAAAAAAAAAANAAXBOZiRUNDA3REZaRTJNM0RRTVBUWUMwN1hBTjlNMS4u&route=shorturl', style: 'primary', target: '_blank' }
         ]
@@ -109,7 +109,7 @@ const TEAM_DATA = [
         visible: true,
         tag: 'Partner',
         heading: 'Company Projects',
-        body: 'Bring a real challenge to our community. Students build creative solutions — sometimes products that actually ship.',
+        body: 'Bring a real challenge to our community. Students build creative solutions - sometimes products that actually ship.',
         perks: ['Present a challenge', 'Access to student talent', 'Networking with UM students'],
         buttons: [
           { label: 'Get in Touch', href: 'mailto:info@mainmaastricht.com', style: 'primary', target: '_self' }
@@ -117,7 +117,7 @@ const TEAM_DATA = [
       },
       {
         id: 'active',
-        visible: true,
+        visible: false,
         tag: 'Core Team',
         heading: 'Active Member',
         body: 'Shape the direction of MAIN. Help organise events, build partnerships, and grow the community.',
@@ -156,7 +156,7 @@ const TEAM_DATA = [
 
     renderJoinCards();
 
-    // CONTACT FORM — submit handler
+    // CONTACT FORM - submit handler
     document.getElementById('contactForm').addEventListener('submit', function(e) {
       e.preventDefault();
       const name    = document.getElementById('cf-name').value.trim();
